@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,36 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eZ-4k-ScW">
-                                <rect key="frame" x="192.5" y="220" width="29" height="57"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-hE-R5d">
+                                <rect key="frame" x="92.5" y="501" width="60" height="60"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="d2t-bg-RRj"/>
+                                    <constraint firstAttribute="width" constant="60" id="uFM-UW-DSQ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchDown" id="vuf-Gg-8sO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Jh8-Pk-9he">
+                                <rect key="frame" x="261" y="501" width="60" height="60"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SZU-y2-mRh"/>
+                                    <constraint firstAttribute="width" constant="60" id="dUJ-DD-T4H"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="pause"/>
+                                <connections>
+                                    <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchDown" id="OEP-QR-Lsj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eZ-4k-ScW">
+                                <rect key="frame" x="207" y="351" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-hE-R5d">
-                                <rect key="frame" x="147" y="413" width="120" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="d2t-bg-RRj"/>
-                                    <constraint firstAttribute="width" constant="120" id="uFM-UW-DSQ"/>
-                                </constraints>
-                                <state key="normal">
-                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="switchTouch:" destination="BYZ-38-t0r" eventType="touchDown" id="oiR-nq-yeD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0eZ-4k-ScW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="7LS-2i-wAJ"/>
-                            <constraint firstItem="fCg-hE-R5d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XXi-ER-lat"/>
-                            <constraint firstItem="fCg-hE-R5d" firstAttribute="centerX" secondItem="0eZ-4k-ScW" secondAttribute="centerX" id="flo-Tv-1Ch"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCg-hE-R5d" secondAttribute="bottom" constant="301" id="HTG-yB-Pjw"/>
+                            <constraint firstItem="fCg-hE-R5d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="83" id="XXi-ER-lat"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jh8-Pk-9he" secondAttribute="trailing" constant="93" id="YHH-VT-Su6"/>
+                            <constraint firstItem="fCg-hE-R5d" firstAttribute="centerX" secondItem="0eZ-4k-ScW" secondAttribute="centerX" constant="-84.5" id="flo-Tv-1Ch"/>
+                            <constraint firstItem="0eZ-4k-ScW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="307" id="iEB-OF-yc2"/>
                             <constraint firstItem="0eZ-4k-ScW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wgS-Rt-FBZ"/>
+                            <constraint firstItem="Jh8-Pk-9he" firstAttribute="top" secondItem="fCg-hE-R5d" secondAttribute="top" id="ymG-IG-gyj"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="fCg-hE-R5d" id="pGB-rV-HxV"/>
+                        <outlet property="stopButton" destination="Jh8-Pk-9he" id="SKJ-qd-5QO"/>
                         <outlet property="timeLabel" destination="0eZ-4k-ScW" id="wUx-X3-7vU"/>
                     </connections>
                 </viewController>
@@ -56,7 +71,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="pause" width="30" height="30"/>
+        <image name="play" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
