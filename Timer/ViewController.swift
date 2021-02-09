@@ -8,8 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     var nbrs:Int64=0
+    
+    var taps=0;
+
+    let imgButton = ["play","pause"];
+    
+    /*
+     currentPlayerIcon.image=UIImage(named: img[tour%2]+".png")
+     */
+    @IBAction func switchTouch(_ sender: Any) {
+        
+    }
     @IBOutlet weak var timeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,9 +31,11 @@ class ViewController: UIViewController {
     }
     @objc func incr() {
         nbrs+=1;
-        timeLabel.text=nbrs
+        timeLabel.text=String(nbrs);
         
     }
+    
+    
 
 
 }

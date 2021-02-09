@@ -23,23 +23,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzA-ff-PKi">
-                                <rect key="frame" x="257" y="544" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-hE-R5d">
-                                <rect key="frame" x="90" y="503" width="120" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-hE-R5d">
+                                <rect key="frame" x="147" y="413" width="120" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="d2t-bg-RRj"/>
+                                    <constraint firstAttribute="width" constant="120" id="uFM-UW-DSQ"/>
+                                </constraints>
                                 <state key="normal">
                                     <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchTouch:" destination="BYZ-38-t0r" eventType="touchDown" id="oiR-nq-yeD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0eZ-4k-ScW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="7LS-2i-wAJ"/>
+                            <constraint firstItem="fCg-hE-R5d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XXi-ER-lat"/>
+                            <constraint firstItem="fCg-hE-R5d" firstAttribute="centerX" secondItem="0eZ-4k-ScW" secondAttribute="centerX" id="flo-Tv-1Ch"/>
                             <constraint firstItem="0eZ-4k-ScW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wgS-Rt-FBZ"/>
                         </constraints>
                     </view>
